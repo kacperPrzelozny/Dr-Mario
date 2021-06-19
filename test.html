@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        #wirusy {
+            width: 208px;
+            height: 192px;
+            border: 1px solid red;
+            position: relative;
+            top: 50px;
+            left: 200px;
+        }
+
+        #blue {
+            width: 64px;
+            height: 48px;
+            /* border: 1px solid red; */
+            /* background-image: url(img/lupa/bl/1.png); */
+            position: absolute;
+            top: 128px;
+            left: 80px;
+        }
+
+        #brown {
+            width: 64px;
+            height: 48px;
+            /* border: 1px solid red; */
+            /* background-image: url(img/lupa/br/1.png); */
+            position: absolute;
+            top: 80px;
+            left: 16px;
+        }
+
+        #yellow {
+            width: 64px;
+            height: 48px;
+            /* border: 1px solid red; */
+            /* background-image: url(img/lupa/yl/1.png); */
+            position: absolute;
+            top: 48px;
+            left: 96px;
+        }
+        .row{
+            display: flex;
+        }   
+    </style>
+</head>
+
+<body>
+    <div id="wirusy">
+        <div id="blue"></div>
+        <div id="brown"></div>
+        <div id="yellow"></div>
+    </div>
+    <script>
+        "use strict"
+        for(var i = 0;i<12;i++){
+            for(var j = 0;j<13;j++){
+
+            }
+        }
+        const lupa = {
+            frame: 1,
+            stage: 1,
+            zmianaObrazka() {
+                // if (lupa.frame == 1){lupa.przemieszczanie()}
+                let blue = document.getElementById("blue")
+                let yellow = document.getElementById("yellow")
+                let brown = document.getElementById("brown")
+                blue.style.backgroundImage = "url('img/lupa/bl/" + lupa.frame + ".png')"
+                yellow.style.backgroundImage = "url('img/lupa/yl/" + lupa.frame + ".png')"
+                brown.style.backgroundImage = "url('img/lupa/br/" + lupa.frame + ".png')"
+                //console.log(lupa.frame)  
+                if (lupa.frame == 1){lupa.przemieszczanie()}
+                lupa.frame++;
+                if (lupa.frame == 5){lupa.frame = 1} 
+                
+            },
+            przegrana() {
+                let blue = document.getElementById("blue")
+                let yellow = document.getElementById("yellow")
+                let brown = document.getElementById("brown")
+                blue.style.backgroundImage = "url('img/lupa/bl/" + lupa.frame + ".png')"
+                yellow.style.backgroundImage = "url('img/lupa/yl/" + lupa.frame + ".png')"
+                brown.style.backgroundImage = "url('img/lupa/br/" + lupa.frame + ".png')"
+                lupa.frame += 2;
+                if (lupa.frame == 6) lupa.frame = 2
+            },
+            przemieszczanie() {
+                let blue = document.getElementById("blue")
+                let yellow = document.getElementById("yellow")
+                let brown = document.getElementById("brown")
+                if (lupa.stage == 1) {
+                    blue.style.top = "128px"
+                    blue.style.left = "80px"
+                    yellow.style.top = "48px"
+                    yellow.style.left = "96px"
+                    brown.style.top = "80px"
+                    brown.style.left = "16px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 2) {
+                    blue.style.top = "128px"
+                    blue.style.left = "96px"
+                    yellow.style.top = "48px"
+                    yellow.style.left = "80px"
+                    brown.style.top = "96px"
+                    brown.style.left = "16px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 3) {
+                    blue.style.top = "112px"
+                    blue.style.left = "112px"
+                    yellow.style.top = "48px"
+                    yellow.style.left = "64px"
+                    brown.style.top = "112px"
+                    brown.style.left = "32px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 4) {
+                    blue.style.top = "96px"
+                    blue.style.left = "112px"
+                    yellow.style.top = "48px"
+                    yellow.style.left = "48px"
+                    brown.style.top = "128px"
+                    brown.style.left = "32px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 5) {
+                    blue.style.top = "80px"
+                    blue.style.left = "112px"
+                    yellow.style.top = "64px"
+                    yellow.style.left = "32px"
+                    brown.style.top = "128px"
+                    brown.style.left = "48px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 6) {
+                    blue.style.top = "64px"
+                    blue.style.left = "112px"
+                    yellow.style.top = "80px"
+                    yellow.style.left = "16px"
+                    brown.style.top = "128px"
+                    brown.style.left = "64px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 7) {
+                    brown.style.top = "128px"
+                    brown.style.left = "80px"
+                    yellow.style.top = "80px"
+                    yellow.style.left = "16px"
+                    blue.style.top = "48px"
+                    blue.style.left = "96px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 8) {
+                    brown.style.top = "128px"
+                    brown.style.left = "96px"
+                    yellow.style.top = "96px"
+                    yellow.style.left = "16px"
+                    blue.style.top = "48px"
+                    blue.style.left = "80px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 9) {
+                    brown.style.top = "112px"
+                    brown.style.left = "112px"
+                    yellow.style.top = "112px"
+                    yellow.style.left = "32px"
+                    blue.style.top = "48px"
+                    blue.style.left = "64px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 10) {
+                    brown.style.top = "96px"
+                    brown.style.left = "112px"
+                    yellow.style.top = "128px"
+                    yellow.style.left = "32px"
+                    blue.style.top = "48px"
+                    blue.style.left = "48px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 11) {
+                    brown.style.top = "80px"
+                    brown.style.left = "112px"
+                    yellow.style.top = "128px"
+                    yellow.style.left = "48px"
+                    blue.style.top = "64px"
+                    blue.style.left = "32px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 12) {
+                    brown.style.top = "64px"
+                    brown.style.left = "112px"
+                    yellow.style.top = "128px"
+                    yellow.style.left = "64px"
+                    blue.style.top = "80px"
+                    blue.style.left = "16px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 13) {
+                    brown.style.top = "48px"
+                    brown.style.left = "96px"
+                    yellow.style.top = "128px"
+                    yellow.style.left = "80px"
+                    blue.style.top = "80px"
+                    blue.style.left = "16px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 14) {
+                    brown.style.top = "48px"
+                    brown.style.left = "80px"
+                    yellow.style.top = "128px"
+                    yellow.style.left = "96px"
+                    blue.style.top = "96px"
+                    blue.style.left = "16px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 15) {
+                    brown.style.top = "48px"
+                    brown.style.left = "64px"
+                    yellow.style.top = "112px"
+                    yellow.style.left = "112px"
+                    blue.style.top = "112px"
+                    blue.style.left = "32px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 16) {
+                    brown.style.top = "48px"
+                    brown.style.left = "48px"
+                    yellow.style.top = "96px"
+                    yellow.style.left = "112px"
+                    blue.style.top = "128px"
+                    blue.style.left = "32px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 17) {
+                    brown.style.top = "64px"
+                    brown.style.left = "32px"
+                    yellow.style.top = "80px"
+                    yellow.style.left = "112px"
+                    blue.style.top = "128px"
+                    blue.style.left = "48px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 18) {
+                    brown.style.top = "80px"
+                    brown.style.left = "16px"
+                    yellow.style.top = "64px"
+                    yellow.style.left = "112px"
+                    blue.style.top = "128px"
+                    blue.style.left = "64px"
+                    lupa.stage++
+                }
+                else if (lupa.stage == 19) {
+                    brown.style.top = "80px"
+                    brown.style.left = "16px"
+                    yellow.style.top = "48px"
+                    yellow.style.left = "96px"
+                    blue.style.top = "128px"
+                    blue.style.left = "80px"
+                    lupa.stage=2
+                }
+             }
+        }
+        let wirusy = setInterval(lupa.zmianaObrazka, 300)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+#gameplay{
+    position: relative;
+    width: 640px;
+    height: 384px;
+    background-image: url("img/bg1.png");
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+#animacja{
+    position: absolute;
+    top: 0;
+    left: 320px;
+    height: 96px;
+    width: 192px;
+    background-color: rgba(255,0,0,0);
+}
+#plansza{
+    top: 96px;
+    left: 272px;
+    width: 128px;
+    background-color: black;
+    position: absolute;
+}
+#GOSC{
+    position: absolute;
+    top: 128px;
+    left: 224px;
+    height: 80px;
+    width: 224px;
+    background-color: rgba(255,0,0,0);
+    z-index: 1;
+}
+#pressKey{
+    width: 640px;
+    height: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("img/press_any_key_to_continue.png");
+    display: none;
+}
+#wirusy {
+    width: 208px;
+    height: 192px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    left: 16px;
+    top: 176px;
+}
+
+#blue {
+    width: 64px;
+    height: 48px;
+    /* border: 1px solid red; */
+    /* background-image: url(img/lupa/bl/1.png); */
+    position: absolute;
+    top: 128px;
+    left: 80px;
+}
+
+#brown {
+    width: 64px;
+    height: 48px;
+    /* border: 1px solid red; */
+    /* background-image: url(img/lupa/br/1.png); */
+    position: absolute;
+    top: 80px;
+    left: 16px;
+}
+
+#yellow {
+    width: 64px;
+    height: 48px;
+    /* border: 1px solid red; */
+    /* background-image: url(img/lupa/yl/1.png); */
+    position: absolute;
+    top: 48px;
+    left: 96px;
+}
+.row{
+    display: flex;
+}
+.row2{
+    display: flex;
+    background-color: rgba(255,0,0,0);
+}
+.field{
+    width: 16px;
+    height: 16px;
+}
+.field2{
+    width: 16px;
+    height: 16px;
+    background-color: rgba(255,0,0,0);
+}
+#score{
+    position: absolute;
+    width: 112px;
+    height: 16px;
+    top: 126px;
+    left: 80px;
+    /*border: 1px solid red;*/
+    background-color: rgba(255,0,0,0);
+    display: flex;
+}
+#top{
+    position: absolute;
+    width: 112px;
+    height: 16px;
+    top: 80px;
+    left: 80px;
+    /*border: 1px solid red;*/
+    background-color: rgba(255,0,0,0);
+    display: flex;
+}
+#level{
+    position: absolute;
+    width: 32px;
+    height: 16px;
+    top: 240px;
+    left: 560px;
+    /*border: 1px solid red;*/
+    background-color: rgba(255,0,0,0);
+    display: flex;
+}
+#virus{
+    position: absolute;
+    width: 32px;
+    height: 16px;
+    top: 336px;
+    left: 560px;
+    /*border: 1px solid red;*/
+    background-color: rgba(255,0,0,0);
+    display: flex;
+}
+
